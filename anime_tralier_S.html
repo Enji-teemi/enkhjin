@@ -4,7 +4,8 @@
         <title>SillyGoose</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" type="image/png" href="./assets/favicon.png" >
+        <link rel="shortcut icon" type="image/png" href="./assets/favicon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
         <style>
             @import url('./styles/fonts.css');
 
@@ -22,30 +23,153 @@
                 width: 100%;
                 min-height: 100vh;
                 display: flex;
-                flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                background: url('./assets/images/toaruKagaku.jpg');
-                background-repeat: no-repeat;
-                background-size: cover;
+                background-color: black;
             }
 
-            body div {
+            .beginner {
                 position: absolute;
-                width: 70%;
-                height: 70%;
+                z-index: 10;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 1;
+                transition: 2.2s ease-in;
             }
 
-            div iframe {
-                position: relative;
-                width: 100%;
-                height: 100%;
+            .beginner button {
+                width: 150px;
+                height: 150px;
+                font-size: 3.5rem;
+                font-weight: bolder;
+                text-transform: uppercase;
+                outline: none;
+                background-color: black;
+                border: 3px solid white;
+                color: white;
+                transition: 0.2s ease-in-out;
+                cursor: pointer;
             }
+
+            .beginner button i {
+                color: white;
+            }
+
+            .beginner button:hover {
+                background: inherit;
+                color: #050801;
+                box-shadow: 0 0 5px #ffffff,
+                            0 0 25px #ffffff,
+                            0 0 50px #ffffff,
+                            0 0 200px #ffffff;
+                text-shadow: 0 0 5px #ffffff,
+                            0 0 25px #ffffff,
+                            0 0 50px #ffffff,
+                            0 0 200px #ffffff;
+            }
+
+            .video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                width: 100%;
+                min-height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .video iframe {
+                position: fixed;
+                width: 150%;
+                height: 150%;
+            }
+
+            .v-curtain {
+                position: absolute;
+                z-index: 2;
+                top: 0;
+                left: 0;
+                width: 100%;
+                min-height: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                padding: 50px 0;
+            }
+
+            .v-curtain p {
+                padding: 30px 70px;
+                text-align: justify;
+                letter-spacing: 1px;
+                line-height: 30px;
+            }
+
+            @media screen and (max-width: 700px) {
+                .video iframe {
+                    position: fixed;
+                    width: 300%;
+                    height: 300%;
+                }
+            }
+
         </style>
     </head>
     <body>
-        <div>
-            <iframe src="https://www.youtube.com/embed/jL_vEw6hObw"></iframe>
+        <div class="beginner" id="curtain">
+            <button onclick="play()" id="play-button">
+                <i class="fa fa-play" style="color: white;" aria-hidden="true"></i>
+            </button>
         </div>
+        <div class="video">
+            <iframe id="video-player" src="https://www.youtube-nocookie.com/embed/jL_vEw6hObw?si=Oww_FlzE7evzABry&amp;controls=0&amp;mute=1&amp;loop=1&amp;enablejsapi=1" frameborder="0" autoplay;></iframe>
+        </div>
+        <div class="v-curtain">
+            <h1>Toaru Kagaku no Railgun</h1>
+            <p>
+                A Certain Scientific Railgun (Японоор: とある科学の超電磁砲レールガン, Хепберн: Тоару Кагаку но Реруган)[a] нь Японы цуврал манга бөгөөд Казумастюкава07-р 4-р сарын дугаарт, Морюутай Камачигийн 4-р дугаарт бичсэн. -ийн ASCII Media Works компанийн Dengeki Daioh сэтгүүл. Энэхүү манга нь Камачигийн "A Certain Magical Index" цувралын үндсэн түүхийн үйл явдлуудын өмнөх болон үйл явдлын үеэр өрнөсөн цуврал бүтээл юм. Seven Seas Entertainment 2011 оны 6-р сард Хойд Америкт цувралаа нийтэлж эхэлсэн. J.C.Staff-ын дасан зохицсон телевизийн цуврал анимэ 2009 оны 10-р сараас 2010 оны 3-р сарын хооронд Японд гарч, дараа нь 2010 оны 10-р сард анхны видео анимэ гарчээ. A Certain Scientific нэртэй хоёр дахь улирал. Railgun S 2013 оны 4-р сараас 9-р сарын хооронд цацагдсан. A Certain Scientific Railgun: Astral Buddy нэртэй манга цуврал 2017 оны 4-р сараас 2020 оны 7-р сар хүртэл Dengeki Daioh-д цувралаар тавигдаж эхэлсэн. A Certain Scientific Railgun T нэртэй 3-р анги 2020 оны 1-р сараас 9-р сарын хооронд цацагдсан. .
+            </p>    
+        </div>
+            
+        <script>
+            var tag = document.createElement('script');
+
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+
+            var player;
+            function onYouTubeIframeAPIReady() {
+                player = new YT.Player('video-player', {
+                videoId: 'jL_vEw6hObw',
+                events: {
+                    'onReady': onPlayerReady,
+                }
+                });
+            }
+
+
+            function onPlayerReady(event) {
+                event.target.playVideo();
+            }
+
+
+
+            function play() {
+                let curtain = document.getElementById("curtain");
+                curtain.style = "z-index: -10; opacity:0;";
+            }
+        </script>
     </body>
 </html>

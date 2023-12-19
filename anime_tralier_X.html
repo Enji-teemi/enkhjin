@@ -4,7 +4,8 @@
         <title>SillyGoose</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" type="image/png" href="./assets/favicon.png" >
+        <link rel="shortcut icon" type="image/png" href="./assets/favicon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
         <style>
             @import url('./styles/fonts.css');
 
@@ -22,31 +23,155 @@
                 width: 100%;
                 min-height: 100vh;
                 display: flex;
-                flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                background: url('./assets/images/spy-x-family.jpg');
-                background-repeat: no-repeat;
-                background-size: cover;
+                background-color: black;
             }
 
-            body div {
+            .beginner {
                 position: absolute;
-                width: 70%;
-                height: 70%;
+                z-index: 10;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 1;
+                transition: 2.2s ease-in;
             }
 
-            div iframe {
-                position: relative;
+            .beginner button {
+                width: 150px;
+                height: 150px;
+                font-size: 3.5rem;
+                font-weight: bolder;
+                text-transform: uppercase;
+                outline: none;
+                background-color: black;
+                border: 3px solid white;
+                color: white;
+                transition: 0.2s ease-in-out;
+                cursor: pointer;
+            }
+
+            .beginner button i {
+                color: white;
+            }
+
+            .beginner button:hover {
+                background: inherit;
+                color: #050801;
+                box-shadow: 0 0 5px #ffffff,
+                            0 0 25px #ffffff,
+                            0 0 50px #ffffff,
+                            0 0 200px #ffffff;
+                text-shadow: 0 0 5px #ffffff,
+                            0 0 25px #ffffff,
+                            0 0 50px #ffffff,
+                            0 0 200px #ffffff;
+            }
+
+            .video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
                 width: 100%;
-                height: 100%;
+                min-height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .video iframe {
+                position: fixed;
+                width: 150%;
+                height: 150%;
+            }
+
+            .v-curtain {
+                position: absolute;
+                z-index: 2;
+                top: 0;
+                left: 0;
+                width: 100%;
+                min-height: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                padding: 50px 0;
+            }
+
+            .v-curtain p {
+                padding: 30px 70px;
+                text-align: justify;
+                letter-spacing: 1px;
+                line-height: 30px;
+            }
+
+            @media screen and (max-width: 700px) {
+                .video iframe {
+                    position: fixed;
+                    width: 300%;
+                    height: 300%;
+                }
             }
 
         </style>
     </head>
     <body>
-        <div>
-            <iframe src="https://www.youtube.com/embed/CCXLUQzuigw" allowfullscreen></iframe>
+        <div class="beginner" id="curtain">
+            <button onclick="play()" id="play-button">
+                <i class="fa fa-play" style="color: white;" aria-hidden="true"></i>
+            </button>
         </div>
+        <div class="video">
+            <iframe id="video-player" src="https://www.youtube-nocookie.com/embed/OLUJIM1Ib0w?si=ltPnphoLGENJat8v&amp;controls=0&amp;mute=1&amp;loop=1&amp;enablejsapi=1" frameborder="0" autoplay;></iframe>
+        </div>
+        <div class="v-curtain">
+            <h1>Spy X Family</h1>
+            <p>Spy × Family (SPY×FAMILY гэсэн загвартай бөгөөд "тагнуулч гэр бүл" гэж нэрлэдэг) бол Тацуя Эндогийн бичиж, зурсан Японы манга цуврал юм. Энэ үйл явдал нь даалгавраа биелүүлэхийн тулд "гэр бүлийг бий болгох" ёстой тагнуулч, охиноо өргөж авсан охин нь телепат, гэрлэхийг зөвшөөрсөн эмэгтэй нь чадварлаг алуурчин гэдгийг ойлгодоггүй. Энэхүү цувралыг 2019 оны 3-р сараас эхлэн Shueisha-ийн Shonen Jump+ программ болон вэб сайтад хоёр долоо хоног тутам цувралаар хүргэж байгаа бөгөөд бүлгүүдийг 2023 оны 10-р сарын байдлаар арван хоёр танкобон ботид цуглуулсан. Энэ нь Хойд Америкт Viz Media-аас лиценз авсан.
+
+                Wit Studio болон CloverWorks-ийн бүтээсэн анимэ телевизийн цуврал дасан зохицох анимэ нь 2022 оны 4-р сард Токиогийн ТВ болон түүний салбар станцууд дээр нээлтээ хийсэн бөгөөд Ази дахь Muse Communication болон дэлхий даяар Crunchyroll лицензийг авсан. Хоёрдугаар хагас нь 2022 оны 10-р сараас 12-р сар хүртэл гарсан. Өнгөрсөн жилийн дасан зохицох ангиас үргэлжилсэн хоёрдугаар анги нь 2023 оны 10-р сард нээлтээ хийсэн. Телевизийн цувралаас эргэн ирсэн жүжигчид оролцсон Тагнуулч × Гэр бүлийн код: Цагаан нэртэй анимэ кино театрт гарах болно. 2023 оны арванхоёрдугаар сард Японд.
+                
+                2023 оны арванхоёрдугаар сар гэхэд Spy × Family 34 сая гаруй хувь хэвлэгдсэн нь хамгийн их борлуулалттай манга цувралуудын нэг болжээ. Энэхүү цуврал нь түүх, инээдмийн жүжиг, дүрүүд, дуу хоолой, үйл ажиллагааны үзэгдэл, урлагийн бүтээлүүдээрээ магтаал хүртэж, бүх нийтээр хүлээн зөвшөөрөгдсөн.</p>
+        </div>
+            
+        <script>
+            var tag = document.createElement('script');
+
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+
+            var player;
+            function onYouTubeIframeAPIReady() {
+                player = new YT.Player('video-player', {
+                videoId: 'OLUJIM1Ib0w',
+                events: {
+                    'onReady': onPlayerReady,
+                }
+                });
+            }
+
+
+            function onPlayerReady(event) {
+                event.target.playVideo();
+            }
+
+
+
+            function play() {
+                let curtain = document.getElementById("curtain");
+                curtain.style = "z-index: -10; opacity:0;";
+            }
+        </script>
     </body>
 </html>
