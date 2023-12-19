@@ -1,0 +1,222 @@
+@import url('fonts.css');
+
+
+.main-content {
+    background-color: transparent;
+    position: relative;
+    left: 0;
+    width: 100%;
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.main-content #loading-line {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 7px;
+    background-color: orangered;
+}
+
+
+.main-content .main-banner {
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: blue;
+}
+
+
+.main-content .main-banner  .carousel {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 800px;
+    background-color: red;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+.main-content .main-banner  .carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+.main-content .main-banner .carousel-grad {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,0.8267682072829132) 0%, rgba(0,0,0,0.6222864145658263) 28%, rgba(0,0,0,0.3841911764705882) 48%, rgba(0,0,0,0.14889705882352944) 66%, rgba(0,0,0,0) 100%);
+}
+
+
+.main-content .main-banner .carousel-control {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.main-content .main-banner .carousel-control .carousel-info {
+    position: relative;
+    width: 70%;
+    height: 90%;    
+    background-color: transparent;
+}
+
+
+.main-content .main-banner .carousel-control .carousel-info .banner-genre p {
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 300;
+    margin: 10px 0; 
+}
+
+
+.main-content .main-banner .carousel-control .carousel-info .banner-title h1 {
+    text-transform: uppercase;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    margin-top: 20px;
+    color: orangered;
+}
+
+
+.main-content .main-banner .carousel-control .carousel-info .banner-header h1 {
+    color: rgb(240, 132, 24);
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    font-size: 2.4rem;
+}
+
+
+.main-content .main-banner .carousel-control .carousel-info .banner-sub-header p {
+    color: rgb(240, 132, 24);
+    width: 80%;
+    margin-bottom: 50px;
+    font-size: 1.2rem;
+}
+
+
+.main-content .main-banner .carousel-control .carousel-info .banner-link a {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(255, 132, 24);
+    padding: 16px 27px;
+    border-radius: 5px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+
+.main-content .main-banner .carousel-control .carousel-info .banner-navigation {
+    position: absolute;
+    top: 70%;
+    width: 90%;
+    height: 22%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+    border-radius: 5px;
+}
+
+.banner-navigation .nav-left {
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.banner-navigation .nav-right {
+    width: 50%;
+    height: 100%;
+    background-color: rgb(255, 132, 24);
+}
+
+
+.banner-navigation .nav-left,
+.banner-navigation .nav-right {
+    position: relative;
+    cursor: pointer;
+}
+
+
+.banner-navigation .nav-left img,
+.banner-navigation .nav-right img {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.nev-prev,
+.nev-next {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.nev-next {
+    background-color: rgba(255,69,0, 0.8);
+    transition: 0.5s ease-in-out;
+}
+
+.nev-prev {
+    background-color: rgba(0,0,0,0.9);
+    transition: 0.5s ease-in-out;
+}
+
+.nav-desc {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.6rem;
+    color: white;
+}
+
+.nav-desc i {
+    width: 5%;
+}
+
+.nav-desc p {
+    width: 80%;
+}
+
+#nav-left:hover .nev-prev {
+    background-color: rgba(0,0,0,0.7);
+}
+
+#nav-right:hover .nev-next {
+    background-color: rgba(255,69,0, 0.4);
+}

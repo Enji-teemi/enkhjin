@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Survey page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/png" href="./assets/favicon.png" >
+        <style>
+            @import url('./styles/fonts.css');
+           
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                font-family: 'Roboto Condensed', sans-serif;
+            }
+
+            body {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                min-height: 100vh;
+                overflow: hidden;
+                font-family: 'Roboto Condensed', sans-serif;
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                justify-content: center;
+                overflow-y: auto;
+            }
+
+            .black {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                min-height: 100vh;
+                background: url("./assets/images/881542.png") no-repeat;
+                background-size: cover;
+                background-color: rgba(0, 0, 0, 0.8);
+                z-index: -1;
+                transition: ease all .5s;
+            }
+
+            .layer {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                min-height: 100vh;
+                background-color: rgba(0, 0, 0, 0.75);
+                z-index: 1;
+            }
+
+            .container {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                width: 100%;
+                min-height: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                align-items: center;
+            }
+
+            .article {
+                position: relative;
+                top: 100px;
+                color: white;
+                width: 50%;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                transition: ease all .5s;
+            }
+
+            .article h3 {
+                text-align: justify;
+                padding: 10px 5%;
+                font-size: 1.5rem;
+                font-weight: 500;
+                letter-spacing: 1px;
+            }
+
+            .article p {
+                text-align: justify;
+                padding: 5px 5%;
+                margin-bottom: 30px;
+                letter-spacing: 1px;
+                font-size: 1.3rem;
+                font-weight: 300;
+            }
+
+            h1 {
+                margin-bottom: 50px;
+                padding: 0 10%;
+                letter-spacing: 2px;
+            }
+
+            .article div {
+                position: relative;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            button {
+                position: relative;
+                width: 200px;
+                height: 60px;
+                color: white;
+                letter-spacing: 2px;
+                font-size: 1.2rem;
+                outline: none;
+                background-color: inherit;
+                border: 1px solid white;
+                cursor: pointer;
+            }
+
+
+            @media only screen and (max-width: 1500px) {
+                .article {
+                    width: 75%;
+                }
+
+                .black {
+                    background-position: center;
+                }
+            }
+
+            @media only screen and (max-width: 1000px) {
+                .article {
+                    width: 100%;
+                }
+
+                .black {
+                    background-position: center center;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="black"></div>
+        <div class="layer"></div>
+        <div class="container">
+            <div class="article">
+                <h1>Уламжлалт бус зүйлийг тайлах нь: "Kill la Kill"-ийн анимэ дээр үзүүлэх нөлөө</h1>
+                <div>
+                    <button id='b' onclick="play()">Хөгжим</button>
+                </div>
+                <h3>Оршил</h3>
+                <p>  
+                    &ensp;&ensp;&ensp;&ensp;&ensp;Studio Trigger-ийн бүтээсэн цоо шинэ анимэ болох "Kill la Kill" 2013 онд анимэ ертөнцөд арилшгүй ул мөр үлдээсэн билээ. 
+                    Динамик хөдөлгөөнт дүрс, өвөрмөц дүрслэлийн хэв маяг, сэтгэл хөдөлгөм өгүүлэмжээрээ алдартай "Kill la Kill" нь дүрэм 
+                    журмыг үл тоомсорлож, үзэгчдийг сэтгэл хөдөлгөм, эргэцүүлэн бодох аялалд хүргэдэг.
+                </p>
+                <h3>Харааны хэв маяг</h3>
+                <p>
+                    &ensp;&ensp;&ensp;&ensp;&ensp;"Kill la Kill" киноны хамгийн гайхалтай талуудын нэг бол зоримог бөгөөд уламжлалт бус дүрслэлийн хэв маяг юм. Sushio-ийн
+                    бүтээсэн дүрийн загварууд нь хэтрүүлсэн пропорц, нарийн ширийн зүйлсийг багтаасан бөгөөд мартагдашгүй, нүдэнд харагдахуйц 
+                    ялгаатай жүжигчдийг бий болгодог. Шингэн хөдөлгөөн, динамик үйлдлийн дараалалаар тодорхойлогддог хөдөлгөөнт дүрс нь үзэх 
+                    туршлагыг дээшлүүлж, өгүүллэгт дотоод чанарыг нэмдэг.
+                </p>
+                <h3>Үйл явдал ба сэдэв</h3>
+                <p>
+                    &ensp;&ensp;&ensp;&ensp;&ensp;"Kill la Kill" кинонд эцгийнхээ үхлийн цаад үнэнийг илрүүлэхээр эрэлхийлж буй ахлах сургуулийн сурагч Рюко Матоигийн түүхийг 
+                    өгүүлдэг. Сенкецү гэгддэг усан цэргийн дүрэмт хувцас өмссөн Рюко нууцлаг Сацуки Кирюин тэргүүтэй дарангуйлагч оюутны зөвлөлийн 
+                    эсрэг эрх мэдлийн төлөөх тэмцэлд орооцолдоно. Уг өгүүллэг нь бослого, өөрийгөө нээн илрүүлэх, үнэмлэхүй эрх мэдлийн үр дагавар 
+                    зэрэг сэдвүүдийг судалдаг.
+                </p>
+                <h3>Эрх мэдэл ба феминизм</h3>
+                <p>
+                    &ensp;&ensp;&ensp;&ensp;&ensp;"Kill la Kill" нь феминист сэдвүүдийг зоригтой судалж, хүчирхэгжүүлдгээрээ бусдаас ялгардаг. Уг өгүүлэмж нь уламжлалт жендэрийн 
+                    үүрэг, хэвшмэл ойлголтыг сорьж, үйл явдлыг урагшлуулж буй хүчирхэг, нарийн төвөгтэй эмэгтэй дүрүүдийг дүрсэлсэн. Рюкогийн аялал 
+                    нь түүний ил тод тулааны хувцаслалтын бэлгэдэлтэй хослуулсан нь эрх мэдэл, бие даасан байдал, өөрийн мөн чанараа эргүүлэн олж авах 
+                    тухай хэлэлцүүлэг өрнүүлж байна.
+                </p>
+                <h3>Динамик дуу</h3>
+                <p>
+                    &ensp;&ensp;&ensp;&ensp;&ensp;Хироюки Саваногийн зохиосон анимэгийн лугшилттай дуу нь түүхийн өндөр эрч хүчтэй үйлдлийн дараалал, сэтгэл хөдлөлийн цохилтыг нөхөж 
+                    өгдөг. "Миний бие хуурайшихаас өмнө" гэх мэт дуунууд нь үлгэр дууриал болж, өгүүллийн ерөнхий эрчмийг нэмэгдүүлж, анимэгийн урт 
+                    удаан хугацаанд нөлөөлөл үзүүлэхэд хувь нэмэр оруулсан.
+                </p>
+                <h3>Соёлын лавлагаа, хүндэтгэл</h3>
+                <p>
+                    &ensp;&ensp;&ensp;&ensp;&ensp;"Kill la Kill" нь төрөл бүрийн жанрыг хөгжилтэй байдлаар иш татсан, сонгодог анимэ жүжгийг хүндэтгэдгээрээ алдартай. Шилдэг өөрчлөлтийн 
+                    дарааллаас эхлээд толгой дохих, гайхалтай цувралууд хүртэл анимэ нь шинэлэг, шинэлэг өгүүлэмжийг бүтээхийн зэрэгцээ язгуур үндэстэндээ хүндэтгэл үзүүлдэг.
+                </p>
+                <h3>Өв залгамжлал ба нөлөө</h3>
+                <p>
+                    &ensp;&ensp;&ensp;&ensp;&ensp;"Kill la Kill" нээлтээ хийснээсээ хойш тусгай шүтэн бишрэгчидтэй болж, анимэ нийгэмлэгт удаан хугацаанд нөлөөлсөн. Түүний нөлөөг 
+                    дараагийн бүтээлүүдээс харж болно, бусад бүтээгчид түүний дүрслэлийн хэв маяг, өгүүлэх арга барил, сэдэвчилсэн хайгуулаас санаа авсан.
+                </p>
+                <h3>Дүгнэлт</h3>
+                <p style="margin-bottom: 10%;">
+                    &ensp;&ensp;&ensp;&ensp;&ensp;"Kill la Kill" бол зүгээр л анимэ биш; Энэ нь уламжлалыг сорьж, түүх өгүүлэх хил хязгаарыг түлхэж буй эрч хүчтэй, сэтгэн бодоход хүргэсэн 
+                    туршлага юм. "Kill la Kill" нь динамик хөдөлгөөнт дүрслэл, сэтгэл татам дүрүүд болон феминист сэдвүүдийг судалснаараа дэлхийн өнцөг булан 
+                    бүрт үзэгчдийн сэтгэлийг хөдөлгөж, мөнхийн өв үлдээж, анимэ ертөнцөд онцгой бүтээл хэвээр байна.
+                </p>
+            </div>
+        </div>
+
+        <audio id="music" src="./assets/musics/killlakill.m4a"></audio>
+
+        <script>
+            var is_playing = false;
+            var button = document.getElementById("b");
+
+            function play() {
+                let audio = document.getElementById("music");
+                if (is_playing) {
+                    audio.pause();
+                    is_playing = false;
+                    button.style = "color: white;font-size: 1.2rem;border: 1px solid white;font-weight: normal;";
+                } else {
+                    audio.play();
+                    is_playing = true;
+                    button.style = "color: red;font-size: 1.4rem;border: 4px solid red;font-weight: bolder;";
+                }
+            }
+        </script>
+    </body>
+</html>

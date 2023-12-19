@@ -1,0 +1,181 @@
+<!--<a href="https://www.flaticon.com/free-icons/penguin" title="penguin icons">Penguin icons created by Freepik - Flaticon</a>-->
+
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>SillyGoose</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/png" href="./assets/favicon.png" >
+  
+        <!-- LIBRARIES -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="./libraries/jquery-3.7.1.min.js"></script>
+
+        <!-- STYLES -->
+        <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/style_navbar.css">
+        <link rel="stylesheet" href="./styles/style_footer.css">
+        <link rel="stylesheet" href="./styles/style_home.css">
+
+        <!-- SCRIPTS -->
+        <script src="scripts/scripts_navbar.js"></script>
+        <script src="scripts/scripts_footer.js"></script>
+    </head>
+    <body>
+        <div class="container">
+
+            <div class="nav-bar">
+                <div class="nav-menu">
+                    <div class="logo" style="background-image: url('./assets/images/logo-banner.jpg');">
+                        <div class="logo-text">
+                            <h1>ワ</h1>
+                            <div class="logo-description">
+                                <h2>Аниме<span>Блог</span></h2>
+                                <p>アニメネットワーク</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-button">
+                        <a href="index.html">Нүүр хуудас</a>
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="menu-button">
+                        <a href="anime.html">Аниме</a>
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                    <div class="menu-button">
+                        <a href="manga.html">Манга</a>
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="nav-user">
+                    
+                    <div class="nav-search">
+                        <div class="nav-search-input">
+                            <input type="text" name="" id="" placeholder="Аниме болон Манга нэрээр хайх">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>
+                    </div>
+    
+                    <div class="nav-user-info">
+                        <div class="username">
+                            <p>Сайн уу</p>
+                            <img src="./assets/penguin.png" alt="" srcset="">
+                        </div>
+                        <div class="user-image">
+                            <img src="./assets/images/profile.png" alt="" srcset="">
+                        </div>
+                    </div>
+                        
+                </div>  
+            </div>
+
+            <div class="main-content">
+                <div id="loading-line"></div>
+
+                <div class="main-banner">
+                    <div class="carousel">
+                        <img src="./assets/images/banner.png" alt="" srcset="">
+                    </div>
+                    <div class="carousel-grad"></div>
+                    <div class="carousel-control">
+                        <div class="carousel-info">
+                            <div class="banner-genre">
+                                <p>Адал Явдалт</p>
+                            </div>
+                            <div class="banner-title">
+                                <h1>Килл Ла Килл</h1>
+                            </div>
+                            <div class="banner-header">
+                                <h1>Уламжлалт бус зүйлийг тайлах нь</h1>
+                            </div>
+                            <div class="banner-sub-header">
+                                <p>"Kill la Kill" киноны хамгийн гайхалтай талуудын нэг бол зоримог бөгөөд уламжлалт бус дүрслэлийн хэв маяг юм. Sushio-ийн бүтээсэн дүрийн загварууд нь хэтрүүлсэн пропорц, нарийн ширийн зүйлсийг багтаасан бөгөөд мартагдашгүй...</p>
+                            </div>
+                            <div class="banner-link">
+                                <a href="kill_la_kill.html">Дэлгэрэнгүй</a>
+                            </div>
+                            <div class="banner-navigation">
+                                <div class="nav-left" id="nav-left" onclick="window.location='anime_tralier_S.html'">
+                                    <img src="./assets/images/ToaruKagakuNo.jpg" alt="" srcset="">
+                                    <div class="nev-prev"></div>
+                                    <div class="nav-desc">
+                                        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                                        <!--Banner name-->
+                                        <p>To Apy Кагако но Райлган C Трайлер</p>
+                                    </div>
+                                </div>
+                                <div class="nav-right" id="nav-right" onclick="window.location='anime_tralier_X.html'">
+                                    <img src="./assets/images/spy-x-family.png" alt="" srcset="">
+                                    <div class="nev-next"></div>
+                                    <div class="nav-desc">
+                                        <!--Banner name-->
+                                        <p>Спай Х Фамили Трайлер</p>
+                                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="footer-content">
+                    <div class="footer-contact">
+                        <div class="footer-contact-box">
+                            <h3>Мэдээний жагсаалтад бүртгүүлэх</h3>
+                            <div class="footer-input">
+                                <form action="" method="post">
+                                    <input type="email" name="news_email" id="email" placeholder="Шуудангийн хаяг">
+                                    <a href="./email_subscription.html">GO</a>
+                                </form>
+                            </div>
+                            <p>Шуудангийн жагсаалтад нэгдэж, шинээр болох үйл явдал, аниме, манганы талаарх мэдээг цаг алдалгүй хүлээн аваарай</p>
+                        </div>
+                    </div>
+                    <div class="footer-list">
+                        <div class="footer-quick-links">
+                            <h4>Холбоосууд</h4>
+                            <a href="index.html">Нүүр хуудас <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                            <a href="manga.html">Манга <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                            <a href="anime.html">Аниме <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                            <a href="about.html">Тухай <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="footer-support">
+                            <h4>Тусламж</h4>
+                            <a href="contact.html">Холбоо барих <i class="fa fa-angle-right" aria-hidden="true"></i></a> 
+                            <a href="#">Түгээмэл асуултууд <i class="fa fa-angle-right" aria-hidden="true"></i></a> 
+                            <a href="#">Ашиглах нөхцөл <i class="fa fa-angle-right" aria-hidden="true"></i></a> 
+                            <a href="#">Бүтээгчийн эрх <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="legal">
+                    <div class="legal-name">
+                        <p>Sillygoose </p>
+                        <i class="fa fa-copyright" aria-hidden="true"></i>
+                    </div>
+                    <div class="legal-phone">
+                        <p>+(Anime) 99 33 11 00</p>
+                    </div>
+                    <div class="legal-disclaimer">
+                        <p>Disclaimer</p> 
+                    </div>
+                    <div class="legal-privacy">
+                        <p>Privacy Policy</p>
+                    </div>
+                    <div class="legal-links">
+                        <a href="https://twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="https://www.facebook.com/"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="https://www.pinterest.com/"><i class="fa fa-pinterest-square" aria-hidden="true"></i></a>
+                        <a href="https://www.linkedin.com/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                        <a href="https://www.youtube.com/"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

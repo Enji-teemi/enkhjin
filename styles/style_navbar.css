@@ -1,0 +1,209 @@
+@import url('fonts.css');
+
+
+.nav-bar {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.nav-bar .nav-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    width: 55%;
+    height: 100%;
+}
+
+.nav-bar .nav-menu .logo {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    color: white;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.nav-bar .nav-menu .logo .logo-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    height: 100%;
+}
+
+.nav-bar .nav-menu .logo .logo-text h1 {
+    color: orangered;
+    font-size: 45px;
+    font-weight: bolder;
+    font-family: 'Noto Serif JP', serif;
+    margin: 0px;
+}
+
+.nav-bar .nav-menu .logo .logo-text .logo-description {
+    text-align: center;
+    line-height: 120%;
+    margin: 0 -10px;
+}
+
+.nav-bar .nav-menu .logo .logo-text .logo-description h2 {
+    letter-spacing: 2px;
+    font-size: 26px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.nav-bar .nav-menu .logo .logo-text .logo-description h2 span {
+    font-weight: 700;
+}
+
+.nav-bar .nav-menu .logo .logo-text .logo-description p {
+    width: 200px;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 17px;
+    font-weight: 200;
+    letter-spacing: 2px;
+}
+
+.nav-bar .nav-menu .menu-button {
+    width: 16%;
+    height: 100%;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 21px;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.nav-bar .nav-menu .menu-button a {
+    text-decoration: none;
+    color: black;
+    cursor: inherit;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-bar .nav-menu .menu-button i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-bar .nav-menu .menu-button:hover a,
+.nav-bar .nav-menu .menu-button:hover i {
+    color: orangered;
+}
+
+.nav-bar .nav-menu .menu-button:hover i {
+    opacity: 1;
+    top: 65%;
+}
+
+
+
+.nav-bar .nav-user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    width: 45%;
+    height: 100%;
+}
+
+.nav-bar .nav-user .nav-search {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-bar .nav-user .nav-search .nav-search-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    border: 2px solid #c9c7c7;
+    border-radius: 5px;
+}
+
+.nav-bar .nav-user .nav-search .nav-search-input input {
+    outline: none;
+    border: none;
+    background: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    width: 100%;
+}
+
+.nav-bar .nav-user .nav-search .nav-search-input i {
+    width: 10%;
+    color: #c9c7c7;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+.nav-bar .nav-user .nav-user-info {
+    position: relative;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding-right: 5%;
+    gap: 7%;
+}
+
+.nav-bar .nav-user .nav-user-info .username {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1.25rem;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.nav-bar .nav-user .nav-user-info .username i {
+    font-size: 0.9rem;
+}
+
+.nav-bar .nav-user .nav-user-info .user-image {
+    position: relative;
+    width: 60px;
+    height: 60px;
+}
+
+.nav-bar .nav-user .nav-user-info .user-image img {
+    width: inherit;
+    height: inherit;
+    border-radius: 7px;
+}
