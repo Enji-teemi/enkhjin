@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SillyGoose</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/png" href="./assets/favicon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&family=Roboto+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                font-family: 'Roboto Condensed', sans-serif;   
+            }
+
+            body {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: black;
+            }
+
+            .beginner {
+                position: absolute;
+                z-index: 10;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 1;
+                transition: 2.2s ease-in;
+            }
+
+            .beginner button {
+                width: 150px;
+                height: 150px;
+                font-size: 3.5rem;
+                font-weight: bolder;
+                text-transform: uppercase;
+                outline: none;
+                background-color: black;
+                border: 3px solid white;
+                color: white;
+                transition: 0.2s ease-in-out;
+                cursor: pointer;
+            }
+
+            .beginner button i {
+                color: white;
+            }
+
+            .beginner button:hover {
+                background: inherit;
+                color: #050801;
+                box-shadow: 0 0 5px #ffffff,
+                            0 0 25px #ffffff,
+                            0 0 50px #ffffff,
+                            0 0 200px #ffffff;
+                text-shadow: 0 0 5px #ffffff,
+                            0 0 25px #ffffff,
+                            0 0 50px #ffffff,
+                            0 0 200px #ffffff;
+            }
+
+            .video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                width: 100%;
+                min-height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .video iframe {
+                position: fixed;
+                width: 150%;
+                height: 150%;
+            }
+
+            .v-curtain {
+                position: absolute;
+                z-index: 2;
+                top: 0;
+                left: 0;
+                width: 100%;
+                min-height: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                padding: 50px 0;
+            }
+
+            .v-curtain p {
+                padding: 30px 70px;
+                text-align: justify;
+                letter-spacing: 1px;
+                line-height: 30px;
+            }
+
+            @media screen and (max-width: 700px) {
+                .video iframe {
+                    position: fixed;
+                    width: 300%;
+                    height: 300%;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="beginner" id="curtain">
+            <button onclick="play()" id="play-button">
+                <i class="fa fa-play" style="color: white;" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="video">
+            <iframe id="video-player" src="https://www.youtube-nocookie.com/embed/-uOgpOOW-Nk?si=qrWG5ceo_ymymGL6&amp;controls=0&amp;mute=1&amp;loop=1&amp;enablejsapi=1" frameborder="0" autoplay;></iframe>
+        </div>
+        <div class="v-curtain">
+            <h1>Demon Slayer: Kimetsu no Yaiba</h1>
+            <p>
+                Чөтгөрийн алуурчин: Кимэцү но Яйба (鬼滅の刃, Kimetsu no Yaiba, rgh. "Чөтгөрийн сүйрлийн ир")[4] бол Койохару Готугэгийн бичиж, зурсан Японы манга цуврал юм. 2016 оны 2-р сараас 2020 оны 5-р сар хүртэл Shueisha-ийн shōnen manga сэтгүүлийн Weekly Shonen Jump сэтгүүлд 23 танкобон ботид цуглуулсан бүлгүүдтэй нь цувралаар хэвлүүлсэн. Үүнийг Viz Media англи хэл дээр, Шуэйшагийн Manga Plus платформ дээр нэгэн зэрэг нийтэлсэн. Өсвөр насны Танжиро Камадо гэр бүлээ алж, дүү Незуко нь чөтгөр болж хувирсны дараа чөтгөр алуурчин болохыг эрмэлзэж байгаа үйл явдал өрнөнө.
+
+Ufotable-ийн бүтээсэн 26 ангит анимэ телевизийн цуврал дасан зохицох анимэ нь 2019 оны 4-р сараас 9-р сар хүртэл гарсан. Чөтгөрийн алуурчин: Кимэцү но Яйба – The Movie: Mugen Train нь 2020 оны 10-р сард нээлтээ хийж, хамгийн өндөр орлого олсон анимэ кино болон Японд бичигджээ. бүх цаг үеийн кино. Анимэ цувралын 18 ангит 2-р анги нь 2021 оны 10-р сараас 2022 оны 2-р сар хүртэл гарсан бөгөөд "Чөтгөр алуурчин: Кимэцү но Яйба – Сэлэмчин тосгон руу" эмхэтгэл 2023 оны 2-р сард нээлтээ хийсэн. 11 ангитай 3-р анги 4-р сараас эхлэн цацагдсан. 2023 оны 6-р сар. Дөрөв дэх улирал 2024 оны 2-р улиралд гарах болно.
+
+2021 оны 2-р сар гэхэд манга нь дижитал хувилбарыг оруулаад 150 сая гаруй хувь хэвлэгдсэн нь бүх цаг үеийн хамгийн их борлуулалттай манга цувралын ес дэхь байр эзэллээ. Мөн энэ нь 2019, 2020 оны хамгийн их борлуулалттай манга байсан. Манга болон түүний анимэ дасан зохицох нь хоёулаа шүүмжлэгчдээс өндөр үнэлгээ авсан. Энэхүү анимэ цуврал нь олон шагнал хүртсэн бөгөөд 2010-аад оны шилдэг анимэ гэж тооцогддог. Чөтгөр алуурчин: Кимэцү но Яйба франчайз бол бүх цаг үеийн хамгийн өндөр орлоготой хэвлэл мэдээллийн франчайзын нэг юм.</p>    
+        </div>
+
+        <audio id="music" src="./assets/musics/demon.m4a" loop></audio>
+            
+        <script>
+            var tag = document.createElement('script');
+
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+
+            var player;
+            function onYouTubeIframeAPIReady() {
+                player = new YT.Player('video-player', {
+                videoId: '-uOgpOOW-Nk',
+                events: {
+                    'onReady': onPlayerReady,
+                }
+                });
+            }
+
+
+            function onPlayerReady(event) {
+                event.target.playVideo();
+            }
+
+
+
+            function play() {
+                let curtain = document.getElementById("curtain");
+                curtain.style = "z-index: -10; opacity:0;";
+
+                let audio = document.getElementById("music");
+                audio.play();
+            }
+        </script>
+    </body>
+</html>

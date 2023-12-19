@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SillyGoose</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/png" href="./assets/favicon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&family=Roboto+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                font-family: 'Roboto Condensed', sans-serif;   
+            }
+
+            body {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: black;
+            }
+
+            .beginner {
+                position: absolute;
+                z-index: 10;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 1;
+                transition: 2.2s ease-in;
+            }
+
+            .beginner button {
+                width: 150px;
+                height: 150px;
+                font-size: 3.5rem;
+                font-weight: bolder;
+                text-transform: uppercase;
+                outline: none;
+                background-color: black;
+                border: 3px solid white;
+                color: white;
+                transition: 0.2s ease-in-out;
+                cursor: pointer;
+            }
+
+            .beginner button i {
+                color: white;
+            }
+
+            .beginner button:hover {
+                background: inherit;
+                color: #050801;
+                box-shadow: 0 0 5px #ffffff,
+                            0 0 25px #ffffff,
+                            0 0 50px #ffffff,
+                            0 0 200px #ffffff;
+                text-shadow: 0 0 5px #ffffff,
+                            0 0 25px #ffffff,
+                            0 0 50px #ffffff,
+                            0 0 200px #ffffff;
+            }
+
+            .video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                width: 100%;
+                min-height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .video iframe {
+                position: fixed;
+                width: 150%;
+                height: 150%;
+            }
+
+            .v-curtain {
+                position: absolute;
+                z-index: 2;
+                top: 0;
+                left: 0;
+                width: 100%;
+                min-height: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                padding: 50px 0;
+            }
+
+            .v-curtain p {
+                padding: 30px 70px;
+                text-align: justify;
+                letter-spacing: 1px;
+                line-height: 30px;
+            }
+
+            @media screen and (max-width: 700px) {
+                .video iframe {
+                    position: fixed;
+                    width: 300%;
+                    height: 300%;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="beginner" id="curtain">
+            <button onclick="play()" id="play-button">
+                <i class="fa fa-play" style="color: white;" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="video">
+            <iframe id="video-player" src="https://www.youtube-nocookie.com/embed/8ykEy-yPBFc?si=f8JdLNFIRc51oYdX&amp;controls=0&amp;mute=1&amp;loop=1&amp;enablejsapi=1" frameborder="0" autoplay;></iframe>
+        </div>
+        <div class="v-curtain">
+            <h1>Castle In The Sky</h1>
+            <p>Лапута: Тэнгэрийн шилтгээн (Японоор: 天空の城ラピュタ, Хэпберн: Tenkū no Shiro Rapyuta) нь Хойд Америкт Тэнгэрийн шилтгээн нэрээр нээлтээ хийсэн бөгөөд 1986 онд Хаяо Миязакийн бичиж найруулсан Японы хүүхэлдэйн, уран зөгнөлт адал явдалт кино юм. Үүнийг Исао Такахата бүтээж, Студио Гибли хүүхэлдэйн кино хийж, Toei компани тараасан. Дууны дүрд Япон хувилбарт Майуми Танака, Кейко Ёкозава, Котое Хацуи, Минори Терада нар тогложээ. Энэхүү кинонд төрийн ажилтан Маска, арми болон хэсэг далайн дээрэмчид хөөгдөн, домогт шилтгээн болох Лапута руу явах замд нь хөөгдөж буй өнчин хүүхдүүд Шеета, Пазу нарын тухай өгүүлнэ.
+
+                "Лапута" бол Студио Гиблигийн бүтээсэн анхны хүүхэлдэйн кино бөгөөд Миязакигийн олон жилийн турш хамтран ажиллаж байсан продакшны баг нь дараагийн гучин жилийн турш студитэй үргэлжлүүлэн хамтран ажиллах болно. Тус студийн зорилго бол чанарыг алдагдуулахгүйгээр анхны уран сайхны кино бүтээх явдал байв. 1984 онд болсон нүүрс олборлогчдын ажил хаялтын үр дагаврыг нүдээр үзсэн Миязаки Уэльст хийсэн аялалаас уг киног хэсэгчлэн санаачилсан юм. Лапута арал нь Миязакигийн экологийн гүн ухааны тусгал болох хүн төрөлхтөн, байгаль, технологийн хоорондын харилцааг судлах, байгаль орчны сэдвийг тодруулахад ашиглагддаг. Мөн залуу гол дүрүүд нь Миязакигийн "[өөрийн] ажилдаа хүүхдүүдийн үнэнч шударга байдал, сайн сайхныг" дүрслэхийг хүссэний үр дүнд өгүүллэгийн өвөрмөц өнцгөөс харж болно.[1] Киноны сэргээн засварлах хэв маягийн олон тал, ялангуяа нисдэг машинууд. – 19-р зууны хандлага нөлөөлсөн бөгөөд энэ нь киног орчин үеийн steampunk төрөлд нэр хүндтэй болгосон.
+                
+                Энэ кино 1986 оны 8-р сарын 2-нд Японы театруудаар гарсан. Бокс оффис дээр төсөөлж байснаас доогуур гүйцэтгэлтэй байсан ч дараа нь дахин нээлтээ хийснээр арилжааны амжилтад хүрч, 2021 оны байдлаар 157 сая гаруй ам.долларын ашиг олсон. 1988 онд Токума Шотений захиалгаар хийсэн англи хэл дээрх дубль Хойд Америкийг Streamline Pictures, өөр нэг дуббыг 1998 онд Дисней бүтээж, 2003 онд Буена Виста олон улсад гаргасан. Киноны хэсгийг Миязакигийн ойрын хамтран зүтгэгч Жо Хисайши зохиосон; Хисайши мөн 2003 оны англи дубльд зориулж дахин боловсруулсан дууны ая зохиосон. 2003 оны англи хэл дээрх дубль нь олон янзын үнэлгээ авсан ч энэ кино шүүмжлэгчдийн дунд ерөнхийдөө сайшаагдсан. Энэ нь үзэгчдийн талархлыг хүлээсэн бөгөөд сүүлийн жилүүдэд бүх цаг үеийн хамгийн шилдэг хүүхэлдэйн киноны нэгээр шалгарсан юм. Энэ кино мөн хэд хэдэн алдартай шагналыг хүртсэн. Лапута түүнээс хойш "шашин шүтлэгийн статус"-ыг [2] олж авсан бөгөөд олон хэвлэл мэдээллийн хэрэгслээр ажилладаг хэд хэдэн алдартай уран бүтээлчдэд нөлөөлсөн.</p>
+        </div>
+            
+        <audio id="music" src="./assets/musics/castle.m4a" loop></audio>
+
+        <script>
+            var tag = document.createElement('script');
+
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+
+            var player;
+            function onYouTubeIframeAPIReady() {
+                player = new YT.Player('video-player', {
+                videoId: '8ykEy-yPBFc',
+                events: {
+                    'onReady': onPlayerReady,
+                }
+                });
+            }
+
+
+            function onPlayerReady(event) {
+                event.target.playVideo();
+            }
+
+
+
+            function play() {
+                let curtain = document.getElementById("curtain");
+                curtain.style = "z-index: -10; opacity:0;";
+
+                let audio = document.getElementById("music");
+                audio.play();
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SillyGoose</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/png" href="./assets/favicon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;900&family=Roboto+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                font-family: 'Roboto Condensed', sans-serif;   
+            }
+
+            body {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: black;
+            }
+
+            .beginner {
+                position: absolute;
+                z-index: 10;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                opacity: 1;
+                transition: 2.2s ease-in;
+            }
+
+            .beginner button {
+                width: 150px;
+                height: 150px;
+                font-size: 3.5rem;
+                font-weight: bolder;
+                text-transform: uppercase;
+                outline: none;
+                background-color: black;
+                border: 3px solid white;
+                color: white;
+                transition: 0.2s ease-in-out;
+                cursor: pointer;
+            }
+
+            .beginner button i {
+                color: white;
+            }
+
+            .beginner button:hover {
+                background: inherit;
+                color: #050801;
+                box-shadow: 0 0 5px #ffffff,
+                            0 0 25px #ffffff,
+                            0 0 50px #ffffff,
+                            0 0 200px #ffffff;
+                text-shadow: 0 0 5px #ffffff,
+                            0 0 25px #ffffff,
+                            0 0 50px #ffffff,
+                            0 0 200px #ffffff;
+            }
+
+            .video {
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                width: 100%;
+                min-height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .video iframe {
+                position: fixed;
+                width: 150%;
+                height: 150%;
+            }
+
+            .v-curtain {
+                position: absolute;
+                z-index: 2;
+                top: 0;
+                left: 0;
+                width: 100%;
+                min-height: 100%;
+                background-color: rgba(0, 0, 0, 0.8);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                padding: 50px 0;
+            }
+
+            .v-curtain p {
+                padding: 30px 70px;
+                text-align: justify;
+                letter-spacing: 1px;
+                line-height: 30px;
+            }
+
+            @media screen and (max-width: 700px) {
+                .video iframe {
+                    position: fixed;
+                    width: 300%;
+                    height: 300%;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="beginner" id="curtain">
+            <button onclick="play()" id="play-button">
+                <i class="fa fa-play" style="color: white;" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="video">
+            <iframe id="video-player" src="https://www.youtube-nocookie.com/embed/a2GujJZfXpg?si=rouKBuzr2Mz3sy7S&amp;controls=0&amp;mute=1&amp;loop=1&amp;enablejsapi=1" frameborder="0" autoplay;></iframe>
+        </div>
+        <div class="v-curtain">
+            <h1>Your name</h1>
+            <p>
+                Таны нэр[b] (Японоор: 君の名は。, Хэпберн: Кими но На ва) нь 2016 онд гарсан Японы хүүхэлдэйн романтик уран зөгнөлт кино бөгөөд Макото Шинкай бичиж, найруулж, CoMix Wave Films продюсер, Тохо түгээсэн. Энэ нь ахлах сургуулийн сурагч Таки Тачибана, Мицүха Миямизү нар хэзээ ч уулзаж байгаагүй ч бие биенээ гэнэт сольж, бие биенийхээ амьдралд эмх замбараагүй байдал үүсгэж буй түүхийг дүрсэлдэг. Японд тохиолдож буй байгалийн гамшгийн давтамжаас сэдэвлэн киног бүтээжээ.
+
+Таны нэр 2016 оны 7-р сарын 3-нд Лос-Анжелес хотод болсон 2016 Anime Expo дээр нээлтээ хийсэн бөгөөд 2016 оны 8-р сарын 26-нд Японд театрт гарсан; Энэ нь 2017 онд хэд хэдэн дистрибьютерүүдээр олон улсад гарсан. Энэ нь Рюносүкэ Камики, Моне Камиширайши нарын дуу хоолой, хүүхэлдэйн киноны удирдаач Масаши Андо, дүрийн дизайныг Масаёши Танака, найрал хөгжмийн найруулга болон дууны аяыг Radwimps зохиосон. Шинкайгийн бичсэн ижил нэртэй хөнгөн роман кино нээлтээ хийхээс сарын өмнө хэвлэгджээ. Paramount Pictures болон Bad Robot Productions хамтран амьд тулаант киног бүтээж байна.
+
+Энэ кино нь түүх, хөдөлгөөнт дүрс, дуу хөгжим, дүрслэл, сэтгэл хөдлөлийн жин зэргээрээ магтаал сайшааж, олон нийт шүүмжлэгчдээс өндөр үнэлгээ авсан. Дэлхий даяар 382 сая гаруй ам.долларын ашиг олсон энэ кино нь инфляцийг тооцолгүйгээр бүх цаг үеийн хамгийн их орлого олсон Японы гурав дахь кино болж, олон тооны боксын дээд амжилтыг эвдсэн. Энэ нь 2016 оны Лос Анжелесийн кино шүүмжлэгчдийн нийгэмлэгийн шагнал гардуулах ёслол, 49 дэх Ситжесийн кино наадам, 71 дэх Майничи киноны шагнал гардуулах ёслолын шилдэг хүүхэлдэйн кино зэрэг хэд хэдэн шагналыг хүртсэн; Мөн Японы академийн оны шилдэг хүүхэлдэйн киноны шагналд нэр дэвшсэн.</p>    
+        </div>
+            
+        <audio id="music" src="./assets/musics/name.m4a" loop></audio>
+
+        <script>
+            var tag = document.createElement('script');
+
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+
+            var player;
+            function onYouTubeIframeAPIReady() {
+                player = new YT.Player('video-player', {
+                videoId: 'a2GujJZfXpg',
+                events: {
+                    'onReady': onPlayerReady,
+                }
+                });
+            }
+
+
+            function onPlayerReady(event) {
+                event.target.playVideo();
+            }
+
+
+
+            function play() {
+                let curtain = document.getElementById("curtain");
+                curtain.style = "z-index: -10; opacity:0;";
+
+                let audio = document.getElementById("music");
+                audio.play();
+            }
+        </script>
+    </body>
+</html>
